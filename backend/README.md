@@ -24,13 +24,14 @@ Ele fornecerá a API que será consumida pelo app React Native.
     ```bash
     ├── backend/
     │   ├── ReceitApi/
-    │   │   ├── .env # O arquivo nesse nivel aqui
+    │   │   ├── ReceitApi/
+    │   │   ├── .env  # O arquivo nesse nivel
     │   │   ├── .gitignore
     │   │   ├── db.sqlite3
     │   │   ├── manage.py
     │   │   └── requirements.txt
-    └────── venv
-    └────── readme.md
+    │   ├── venv/
+    │   └── README.md
 
 4. **Agora entre dentro da pasta do projeto:**
     ```bash
