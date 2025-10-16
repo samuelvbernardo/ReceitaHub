@@ -5,7 +5,11 @@ Ele fornecerá a API que será consumida pelo app React Native.
 
 --- 
 ### Configuração inicial para rodar o servidor
-1. **Dentro da pasta backend, crie e ative o ambiente virtual:**
+1. **No terminal entre dentro da pasta backend:**
+    ```bash
+    cd backend
+
+2. **Dentro da pasta backend, crie e ative o ambiente virtual:**
     ```bash
     # Windows
     python -m venv venv
@@ -15,11 +19,11 @@ Ele fornecerá a API que será consumida pelo app React Native.
     python3 -m venv venv
     source venv/bin/activate
 
-2. **Após isso instale as dependências do projeto:**
+3. **Após isso instale as dependências do projeto:**
     ```bash
     pip install -r requirements.txt
 
-3. **Configure o dotenv do projeto.** <br> Dentro da pasta ``ReceitaApi`` crie o arquivo ``.env`` e configure as informações sensiveis, nesse caso só vai precisar das configurações para ``SECRET_KEY`` e ``DEBUG``. <br> 
+4. **Configure o dotenv do projeto.** <br> Dentro da pasta ``ReceitaApi`` crie o arquivo ``.env`` e configure as informações sensiveis, nesse caso só vai precisar das configurações para ``SECRET_KEY`` e ``DEBUG``. <br> 
 **A estrutura esperada é:**
     ```bash
     ├── backend/
@@ -33,15 +37,15 @@ Ele fornecerá a API que será consumida pelo app React Native.
     │   ├── venv/
     │   └── README.md
 
-4. **Agora entre dentro da pasta do projeto:**
+5. **Agora entre dentro da pasta do projeto:**
     ```bash
     cd ReceitApi
 
-5. **Rode o comando de migração:**
+6. **Rode o comando de migração:**
     ```bash
     python manage.py migrate
 
-6. **Inicie o servidor:**
+7. **Inicie o servidor:**
     ```bash
     python manage.py runserver
 
