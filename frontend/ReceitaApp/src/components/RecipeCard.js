@@ -18,7 +18,10 @@ const RecipeCard = ({ recipe, onPress }) => {
 
         <View style={styles.footer}>
           <View style={styles.authorContainer}>
-            <View style={styles.avatar} />
+            {recipe.authorImage && (
+              <Image source={recipe.authorImage} style={styles.avatar} />
+            )}
+            {!recipe.authorImage && <View style={styles.avatarPlaceholder} />}
             <Text style={styles.authorName}>{recipe.author}</Text>
           </View>
           <View style={styles.metaContainer}>
@@ -95,6 +98,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   avatar: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    marginRight: 8,
+  },
+  avatarPlaceholder: {
     width: 32,
     height: 32,
     borderRadius: 16,
