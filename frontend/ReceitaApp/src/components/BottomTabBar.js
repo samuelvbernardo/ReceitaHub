@@ -7,8 +7,8 @@ const BottomTabBar = () => {
 
   const tabs = [
     { name: "Home", label: "Home", icon: "🏠" },
-    { name: "Nova receita", label: "Nova receita", icon: "🍳" },
-    { name: "Perfil", label: "Perfil", icon: "👤" },
+    { name: "NewRecipe", label: "Nova receita", icon: "🍳" },
+    { name: "Profile", label: "Perfil", icon: "👤" },
   ]
 
   return (

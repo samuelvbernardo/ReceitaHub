@@ -10,6 +10,7 @@ import {
   Image,
 } from "react-native"
 import RecipeCard from "../components/RecipeCard"
+import BottomTabBar from "../components/BottomTabBar"
 import { SafeAreaView } from "react-native-safe-area-context"
 import { mockRecipes, categories } from "../data/mockRecipes"
 
@@ -43,7 +44,7 @@ const HomeScreen = ({ navigation }) => {
 
       
       <View style={styles.header}>
-        <View style={styles.headerContent}>
+        <View style={styles.headerTop}>
           <View style={styles.iconContainer}>
             <Image
               source={require("../../assets/icon.png")}
@@ -52,10 +53,11 @@ const HomeScreen = ({ navigation }) => {
             />
             <Text style={styles.iconText}>ReceitaHub</Text>
           </View>
-
-          <TouchableOpacity style={styles.addButton}>
-            <Text style={styles.addButtonText}>+ Nova receita</Text>
-          </TouchableOpacity>
+          <Image
+            source={require("../../assets/images/chefs/maria.png")}
+            style={styles.userAvatar}
+            resizeMode="cover"
+          />
         </View>
         <Text style={styles.subtitle}>Descubra receitas incríveis</Text>
       </View>
@@ -111,6 +113,7 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
+      <BottomTabBar />
     </SafeAreaView>
   )
 }
@@ -128,7 +131,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#E0E0E0",
   },
-  headerContent: {
+  headerTop: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -148,16 +151,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#333",
   },
-  addButton: {
-    backgroundColor: "#E85A4F",
-    paddingHorizontal: 16,
-    paddingVertical: 8,
+  userAvatar: {
+    width: 40,
+    height: 40,
     borderRadius: 20,
-  },
-  addButtonText: {
-    color: "#FFFFFF",
-    fontSize: 14,
-    fontWeight: "600",
+    borderWidth: 2,
+    borderColor: "#E85A4F",
   },
   subtitle: {
     fontSize: 14,
